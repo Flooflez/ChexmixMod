@@ -14,5 +14,6 @@ public class ChexmixMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ItemInit.init();
+		LootTableInit.modifyLootTables();
 	}
 }
