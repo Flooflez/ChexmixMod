@@ -1,6 +1,7 @@
 package net.chexmix.mod;
 
 import net.chexmix.mod.item.*;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -13,6 +14,10 @@ public class ItemInit {
     public static final SquarePretzel SQUARE_PRETZEL = new SquarePretzel();
     public static final WheatChex WHEAT_CHEX = new WheatChex();
 
+    public static final Chexmix CHEXMIX = new Chexmix();
+;
+    public static final Item[] items = new Item[]{WHEAT_CHEX, CIRCLE_PRETZEL, CORN_CHEX, BREADSTICK, RYE_CRACKER, SQUARE_PRETZEL};
+
     public static void init(){
         String MODID = ChexmixMod.MODID;
 
@@ -23,6 +28,7 @@ public class ItemInit {
         Registry.register(Registry.ITEM, new Identifier(MODID, "square_pretzel"), SQUARE_PRETZEL);
         Registry.register(Registry.ITEM, new Identifier(MODID, "wheat_chex"), WHEAT_CHEX);
 
+        Registry.register(Registry.ITEM, new Identifier(MODID, "chexmix"), CHEXMIX);
     }
 
 }
