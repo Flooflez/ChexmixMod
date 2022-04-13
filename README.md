@@ -4,6 +4,7 @@ This mod adds a rare Chex© Mix item that can spawn in various strctures in Mine
 
 Right clicking Chex© Mix randomly gives you one of the 6 crunchy snacks available inside the typical Chex© Mix bag.
 
+## Dependencies
 This mod requires Fabric API.
 Go to [Modrinth](https://modrinth.com/mod/fabric-api) or [Curseforge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and download Fabric API to use this mod.
 
