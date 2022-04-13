@@ -1,9 +1,17 @@
-# Fabric Example Mod
+# Chexmix Mod
 
-## Setup
+This mod adds a rare Chex© Mix item that can spawn in various structions in Minecraft, including villages, strong holds, and pillager outposts.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Right clicking Chex© Mix randomly gives you one of the 6 crunchy snacks available inside the typical Chex© Mix bag.
+
+This mod requires Fabric API.
+Go to [Modrinth](https://modrinth.com/mod/fabric-api) or [Curseforge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and download Fabric API to use this mod.
+
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This project is under the MIT licence. 
+All assets and logic is created by Flooflez. 
+
+Chex© and Chex© Mix and associated logos and imagery are owned by General Mills. 
+© 2022 General Mills. All rights reserved.
