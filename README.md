@@ -1,4 +1,4 @@
-# Chexmix Mod
+# Minecraft Chex© Mix Mod
 
 This mod adds a rare Chex© Mix item that can spawn in various structions in Minecraft, including villages, strong holds, and pillager outposts.
 
