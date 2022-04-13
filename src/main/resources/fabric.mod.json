@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+  "id": "chexmixmod",
+  "version": "1.0.0",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Chexmix Mod",
+  "description": "This mod adds Chexmix to Minecraft",
   "authors": [
-    "Me!"
+    "Flooflez"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Flooflez/ChexmixMod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/chexmixmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.chexmix.mod.ChexmixMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "chexmixmod.mixins.json"
   ],
 
   "depends": {
@@ -33,6 +32,5 @@
     "java": ">=17"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }
