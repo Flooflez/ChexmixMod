@@ -77,7 +77,6 @@ public class LootTableInit {
             }
             else if(WOODLAND_MANSION.equals(id) ||
                     STRONGHOLD_CORRIDOR.equals(id) ){
-                System.out.println("YEEHAW WEESNAW");
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.3f)) // Drops 30% of the time
