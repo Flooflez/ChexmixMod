@@ -2,7 +2,7 @@
 
 This mod adds a rare Chex™ Mix item that can spawn in various strctures in Minecraft, including villages, strong holds, and pillager outposts.
 
-Right clicking Chex™ Mix randomly gives you one of the 6 crunchy snacks available inside the typical Chex© Mix bag.
+Right clicking Chex™ Mix randomly gives you one of the 6 crunchy snacks available inside the typical Chex™ Mix bag.
 
 ## Dependencies
 This mod requires Fabric API.
