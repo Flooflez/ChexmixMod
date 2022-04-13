@@ -1,4 +1,5 @@
 # Minecraft Chex™ Mix Mod
+![ChexModBanner](https://github.com/Flooflez/ChexmixMod/blob/1.18/src/main/resources/assets/chexmixmod/chexbanner.png?raw=true)
 
 This mod adds a rare Chex™ Mix item that can spawn in various strctures in Minecraft, including villages, strong holds, and pillager outposts.
 
