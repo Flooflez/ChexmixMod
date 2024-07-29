@@ -55,7 +55,7 @@ public class LootTableInit {
 
     public static void modifyLootTables() {
 
-        LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) ->
+        LootTableEvents.MODIFY.register(((id, tableBuilder, source) ->
         {
 
             if(VILLAGE_PLAINS_HOUSE.equals(id) ||
@@ -107,8 +107,6 @@ public class LootTableInit {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-
-
         }));
     }
 }

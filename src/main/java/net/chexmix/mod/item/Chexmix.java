@@ -2,7 +2,9 @@ package net.chexmix.mod.item;
 
 import net.chexmix.mod.ChexmixMod;
 import net.chexmix.mod.ItemInit;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.item.v1.EquipmentSlotProvider;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +19,7 @@ import java.util.Random;
 
 public class Chexmix extends Item {
     public Chexmix() {
-        super(new FabricItemSettings().maxCount(1).maxDamage(256));
+        super(new Settings().maxCount(1).maxDamage(256));
     }
 
     @Override
@@ -34,9 +36,7 @@ public class Chexmix extends Item {
 
             user.getItemCooldownManager().set(this, 20);
 
-            itemStack.damage(1, user, (p) -> {
-                p.sendToolBreakStatus(user.getActiveHand());
-            });
+            itemStack.damage(1, user, LivingEntity.getSlotForHand(hand));
 
             return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, itemStack);
         }
