@@ -2,21 +2,26 @@ package net.chexmix.mod;
 
 import net.chexmix.mod.item.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.consume.UseAction;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 public class ItemInit {
 
-    public static final Item CIRCLE_PRETZEL = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3f).snack().build()));
-    public static final Item CORN_CHEX = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(1.5f).snack().build()));
-    public static final Item BREADSTICK = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.9f).snack().build()));
-    public static final Item RYE_CRACKER = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(3).saturationModifier(1.75f).snack().build()));
-    public static final Item SQUARE_PRETZEL = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.6f).snack().build()));
-    public static final Item WHEAT_CHEX = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(1.5f).snack().build()));
+    public static final ConsumableComponent SNACK_COMPONENT = ConsumableComponent.builder().consumeSeconds(0.8F).useAction(UseAction.EAT).sound(SoundEvents.ENTITY_GENERIC_EAT).consumeParticles(true).build();
+    //https://fabricmc.net/2024/10/14/1212.html
+    public static final Item CIRCLE_PRETZEL = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3f).build(), SNACK_COMPONENT));
+    public static final Item CORN_CHEX = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(1.5f).build(), SNACK_COMPONENT));
+    public static final Item BREADSTICK = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.9f).build(), SNACK_COMPONENT));
+    public static final Item RYE_CRACKER = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(3).saturationModifier(1.75f).build(), SNACK_COMPONENT));
+    public static final Item SQUARE_PRETZEL = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.6f).build(), SNACK_COMPONENT));
+    public static final Item WHEAT_CHEX = new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(1.5f).build(), SNACK_COMPONENT));
 
     public static final Chexmix CHEXMIX = new Chexmix();
 ;

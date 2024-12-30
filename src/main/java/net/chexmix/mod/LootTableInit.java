@@ -102,7 +102,7 @@ public class LootTableInit {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            else if(EntityType.VILLAGER.getLootTableId().equals(id)){
+            else if(EntityType.VILLAGER.getLootTableKey().isPresent() && EntityType.VILLAGER.getLootTableKey().get().equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time

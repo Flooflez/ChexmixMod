@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -21,7 +21,7 @@ public class Chexmix extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
         if (!world.isClient) {
@@ -32,13 +32,13 @@ public class Chexmix extends Item {
 
             user.getInventory().insertStack(new ItemStack(items[rand.nextInt(6)]));
 
-            user.getItemCooldownManager().set(this, 20);
+            user.getItemCooldownManager().set(itemStack, 20);
 
             itemStack.damage(1, user, LivingEntity.getSlotForHand(hand));
 
-            return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, itemStack);
+            return ActionResult.SUCCESS;
         }
 
-        return TypedActionResult.fail(itemStack);
+        return ActionResult.FAIL;
     }
 }
